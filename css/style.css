@@ -1,0 +1,118 @@
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body{
+     background:rgb(8, 0, 116);
+     display:flex;
+     justify-content:center;
+}
+
+ section{
+     border: 1px solid black;
+}
+
+.back{
+     height:600px;
+     width:30%;
+     display:flex;
+     flex-flow: row wrap;
+}
+
+#result{
+     width:100%;
+     height:20%;
+     background:black;
+     color:white;
+     font-size:20px;
+     display:flex;
+     flex-flow:column;
+     align-items:end;
+}
+
+.back section{
+     width:25%;
+     height:16%;
+     display:flex;
+     justify-content:center;
+     align-items:center;
+     font-size:30px;
+     font-weight:bold;
+}
+
+.zero{
+     flex-grow: 2;
+}
+
+.operator{
+     background:rgb(255, 255, 0);
+}
+
+.red{
+     background:rgb(197, 8, 8);
+     color:white;
+}
+.number, .zero+section{
+     background: white;
+}
+
+.equal{
+     background:green;
+}
+
+
+@media only screen and (max-width: 600px){
+     .back{
+          height: 300px;
+          width: 40%;
+     }
+     .back section{
+          font-size: 15px;
+     }
+}
+
+
+@media only screen and (min-width: 600px) and (max-width: 900px){
+     .back{
+          height: 500px;
+          width: 40%;
+     }
+
+     .back section{
+          font-size: 20px;
+     }
+
+}
+
+
+
+@media only screen and (min-width: 900px) and (max-width: 1300px){
+     .back{
+          height: 650px;
+          width: 40%;
+     }
+
+     .back section{
+          font-size: 25px;
+     }
+
+}
